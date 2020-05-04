@@ -1,0 +1,32 @@
+* {
+  // box-sizing: border-box;
+  font-family: -apple-system, "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.todo {
+  //center container
+  position: absolute;
+  left: 50%;
+  font-size: 16px;
+  top: 50%;
+  width: 1200px;
+  height: 760px;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 2px 10px rgb(200, 202, 88);
+  border-radius: 15px;
+  border: 1px solid rgb(199, 191, 74);
+
+  &__sidebar {
+    background-color: #fdf9d7;
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid rgb(255, 244, 213);
+    padding: 60px 20px;
+  }
+}
