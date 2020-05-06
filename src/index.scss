@@ -1,5 +1,5 @@
 * {
-  // box-sizing: border-box;
+  box-sizing: border-box;
   font-family: -apple-system, "Roboto", "Oxygen", "Ubuntu", sans-serif;
   margin: 0;
   padding: 0;
@@ -15,8 +15,8 @@
   left: 50%;
   font-size: 16px;
   top: 50%;
-  width: 1200px;
-  height: 760px;
+  width: 900px;
+  height: 645px;
   transform: translate(-50%, -50%);
   box-shadow: 1px 2px 10px rgb(200, 202, 88);
   border-radius: 15px;
@@ -28,5 +28,37 @@
     height: 100%;
     border-right: 1px solid rgb(255, 244, 213);
     padding: 60px 20px;
+  }
+}
+
+.button {
+  background: #4df599;
+  border: 5px;
+  cursor: pointer;
+  color: rgb(102, 102, 102);
+  padding: 10px 20px;
+  font-weight: 500;
+
+  &:hover {
+    background: darken(#4df599, 15%);
+  }
+
+  &:active {
+    background: darken(#4df599, 25%);
+    color: #ffffff;
+  }
+}
+
+.field {
+  background: #ffffff;
+  border: 1px solid #efefef;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-weight: 300;
+  width: 100%;
+
+  &:focus {
+    border-color: rgb(103, 216, 210);
   }
 }

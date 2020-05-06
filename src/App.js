@@ -1,8 +1,13 @@
 import React from "react";
 import List from "./components/List/index";
+import AddListButton from "./components/AddList";
+
+import DB from './assets/db.json'
+
 import "./App.scss";
 
 function App() {
+
   return (
     <div className="todo">
       <div className="todo__sidebar">
@@ -38,15 +43,17 @@ function App() {
             {
               color: "red",
               name: "React",
-              active: true,
+              active: false,
             },
             {
               color: "blue",
               name: "TypeScript",
-              active: false,
+              active: true,
             },
           ]}
+          isRemovable
         />
+        <AddListButton colors={DB.colors}/>
       </div>
       <div className="todo__tasks"></div>
     </div>

@@ -4,4 +4,4 @@
 
 ### 2. npm i sass
 
-### 3. 
+### 3. npm i classnames (for <List classNames />)

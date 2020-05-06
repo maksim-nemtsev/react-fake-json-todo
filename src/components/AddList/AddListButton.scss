@@ -1,0 +1,48 @@
+.add-list {
+  &__popup {
+    width: 325px;
+    height: 160px;
+    background: rgb(205, 253, 253);
+    box-shadow: 15px 6px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: 17px;
+    position: relative;
+
+    .button {
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    &-close-btn {
+      position: absolute;
+      right: -7px;
+      top: -7px;
+      cursor: pointer;
+    }
+
+    &-colors {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+
+    .badge {
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+
+      //so that during selection it doesn’t shift badge
+      border: 2px solid transparent;
+
+      &.active {
+        border: 2px solid #525252;
+      }
+    }
+  }
+
+  input {
+    text-align: center;
+    background: rgb(255, 255, 255);
+    font-size: 14px;
+  }
+}
