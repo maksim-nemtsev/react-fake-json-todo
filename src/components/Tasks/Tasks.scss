@@ -1,0 +1,95 @@
+.tasks {
+  &__title {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    color: rgb(69, 214, 130);
+    border-bottom: 1px solid #37ad6c;
+    padding-bottom: 10px;
+
+    &:hover {
+      img {
+        opacity: 0.3;
+      }
+    }
+
+    img {
+      opacity: 0;
+      margin-left: 10px;
+      margin-bottom: 2px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__items {
+    margin-top: 42px;
+
+    &-row {
+      display: flex;
+      align-items: center;
+
+      p {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .checkbox {
+    //hide checkbox
+    input {
+      display: none;
+    }
+
+    svg {
+      path {
+        stroke: lightyellow;
+      }
+    }
+
+    &:hover {
+      label {
+        background-color: lightgray;
+        border-color: lightgray;
+        svg {
+          opacity: 0.8;
+
+          path {
+            stroke: #818181;
+          }
+        }
+      }
+    }
+
+    label {
+      cursor: pointer;
+      border: 2px solid rgb(216, 216, 216);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      width: 20px;
+      height: 20px;
+
+      svg {
+        opacity: 0;
+      }
+    }
+    //to the right of the input
+    input:checked + label {
+      background: rgb(60, 235, 104);
+      border: 2px solid rgb(60, 235, 104);
+
+      svg {
+        opacity: 0.8;
+        path {
+          stroke: rgb(255, 255, 255);
+        }
+      }
+    }
+  }
+}

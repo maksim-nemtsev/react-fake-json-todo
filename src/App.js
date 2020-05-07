@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import List from "./components/List/index";
 import AddListButton from "./components/AddList";
-
-import DB from './assets/db.json'
+import Tasks from "./components/Tasks";
+import DB from "./assets/db.json";
 
 import "./App.scss";
 
 function App() {
+  const [lists, setLists] = useState(
+    //I create a new array of elements with color.id === colorId from the database in filter method
+    DB.lists.map((item) => {
+      item.color = DB.colors.filter(
+        (color) => color.id === item.colorId
+      )[0].name;
+
+      return item;
+    })
+  );
+
+  // передавать объект из инпута и выбра цвета
+  const onAddList = (obj) => {
+    const newList = [...lists, obj];
+    setLists(newList);
+  };
 
   return (
     <div className="todo">
@@ -29,33 +45,23 @@ function App() {
                 </svg>
               ),
               name: "All tasks",
-              active: true,
+              active: false,
             },
           ]}
         />
         <List
-          items={[
-            {
-              color: "green",
-              name: "JavaScript",
-              active: true,
-            },
-            {
-              color: "red",
-              name: "React",
-              active: false,
-            },
-            {
-              color: "blue",
-              name: "TypeScript",
-              active: true,
-            },
-          ]}
+          //lists state
+          items={lists}
+          onRemove={(item) => {
+            alert(item);
+          }}
           isRemovable
         />
-        <AddListButton colors={DB.colors}/>
+        <AddListButton onAddList={onAddList} colors={DB.colors} />
       </div>
-      <div className="todo__tasks"></div>
+      <div className="todo__tasks">
+        <Tasks />
+      </div>
     </div>
   );
 }

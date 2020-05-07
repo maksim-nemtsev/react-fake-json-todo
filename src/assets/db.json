@@ -1,18 +1,18 @@
 {
   "lists": [
-    { "id": 1, "name": "Покупки", "colorId": 5 },
-    { "id": 2, "name": "Фронтенд", "colorId": 4 },
-    { "id": 2, "name": "Фильмы и сериалы", "colorId": 3 },
-    { "id": 3, "name": "Книги", "colorId": 2 },
-    { "id": 4, "name": "Личное", "colorId": 1 }
+    { "id": 1, "name": "Tasks", "colorId": 5 },
+    { "id": 2, "name": "Frontend", "colorId": 4 },
+    { "id": 2, "name": "Backend", "colorId": 3 },
+    { "id": 3, "name": "Books", "colorId": 2 },
+    { "id": 4, "name": "Articles", "colorId": 1 }
   ],
   "tasks": [
-    { "id": 1, "listId": 2, "text": "Изучить JavaScript" },
-    { "id": 2, "listId": 2, "text": "Изучить паттерны проектирования" },
+    { "id": 1, "listId": 2, "text": "Learn JavaScript" },
+    { "id": 2, "listId": 2, "text": "Learn Design Patterns" },
     {
       "id": 3,
       "listId": 2,
-      "text": "ReactJS Hooks (useState, useReducer, useEffect и т.д.)"
+      "text": "ReactJS Hooks (useState, useReducer, useEffect etc.)"
     },
     { "id": 4, "listId": 2, "text": "Redux (redux-observable, redux-saga)" }
   ],

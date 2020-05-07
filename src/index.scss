@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  font-family: -apple-system, "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-family: "Montserrat", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-weight: 500;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -12,6 +13,8 @@
 .todo {
   //center container
   position: absolute;
+  // up item in right container
+  display: flex;
   left: 50%;
   font-size: 16px;
   top: 50%;
@@ -29,7 +32,13 @@
     border-right: 1px solid rgb(255, 244, 213);
     padding: 60px 20px;
   }
+
+  &__tasks {
+    flex: 1;
+    padding: 60px;
+  }
 }
+
 
 .button {
   background: #4df599;
