@@ -1,25 +1,24 @@
-import React, { useState } from "react";
-import List from "./components/List/index";
-import AddListButton from "./components/AddList";
-import Tasks from "./components/Tasks";
-import DB from "./assets/db.json";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-import "./App.scss";
+import { List, AddList, Tasks } from './components';
 
 function App() {
-  const [lists, setLists] = useState(
-    //I create a new array of elements with color.id === colorId from the database in filter method
-    DB.lists.map((item) => {
-      item.color = DB.colors.filter(
-        (color) => color.id === item.colorId
-      )[0].name;
+  const [lists, setLists] = useState(null);
+  const [colors, setColors] = useState(null);
 
-      return item;
-    })
-  );
+  useEffect(() => {
+    axios
+      .get('http://localhost:3001/lists?_expand=color&_embed=tasks')
+      .then(({ data }) => {
+        setLists(data);
+      });
+    axios.get('http://localhost:3001/colors').then(({ data }) => {
+      setColors(data);
+    });
+  }, []);
 
-  // передавать объект из инпута и выбра цвета
-  const onAddList = (obj) => {
+  const onAddList = obj => {
     const newList = [...lists, obj];
     setLists(newList);
   };
@@ -44,24 +43,25 @@ function App() {
                   />
                 </svg>
               ),
-              name: "All tasks",
-              active: false,
-            },
+              name: 'Все задачи'
+            }
           ]}
         />
-        <List
-          //lists state
-          items={lists}
-          onRemove={(item) => {
-            alert(item);
-          }}
-          isRemovable
-        />
-        <AddListButton onAddList={onAddList} colors={DB.colors} />
+        {lists ? (
+          <List
+            items={lists}
+            onRemove={id => {
+              const newLists = lists.filter(item => item.id !== id);
+              setLists(newLists);
+            }}
+            isRemovable
+          />
+        ) : (
+          'Загрузка...'
+        )}
+        <AddList onAdd={onAddList} colors={colors} />
       </div>
-      <div className="todo__tasks">
-        <Tasks />
-      </div>
+      <div className="todo__tasks">{lists && <Tasks list={lists[1]} />}</div>
     </div>
   );
 }

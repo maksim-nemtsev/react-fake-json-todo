@@ -7,6 +7,9 @@
     border-radius: 5px;
     padding: 17px;
     position: relative;
+    box-sizing: border-box;
+    top: -25px;
+    left: 10px;
 
     .button {
       width: 100%;
@@ -30,6 +33,7 @@
       width: 25px;
       height: 25px;
       cursor: pointer;
+      border: 2px solid transparent;
 
       //so that during selection it doesn’t shift badge
       border: 2px solid transparent;

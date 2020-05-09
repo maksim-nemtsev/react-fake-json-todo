@@ -6,6 +6,8 @@
 
 ### 3. npm i classnames (for <List classNames />)
 
-### 4.
+### 4. npm install -g json-server
 
-### 5.
+### 4.1 json-server ./src/assets/db.json --watch --port 3001
+
+### 5. npm i axios
