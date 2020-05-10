@@ -2,50 +2,73 @@
   "lists": [
     {
       "id": 1,
-      "name": "Tasks",
+      "name": "Article",
       "colorId": 5
     },
     {
-      "id": 2,
-      "name": "Frontend",
-      "colorId": 4
+      "name": "dfdf",
+      "colorId": 1,
+      "id": 2
     },
     {
-      "id": 2,
-      "name": "Backend",
-      "colorId": 3
+      "name": "gghghg",
+      "colorId": 1,
+      "id": 3
     },
     {
-      "id": 3,
-      "name": "Books",
-      "colorId": 2
-    },
-    {
-      "id": 4,
-      "name": "Articles",
-      "colorId": 1
+      "name": "ghghg",
+      "colorId": 1,
+      "id": 4
     }
   ],
   "tasks": [
     {
-      "id": 1,
-      "listId": 2,
-      "text": "Learn JavaScript"
+      "listId": 1,
+      "text": "gfgf",
+      "completed": false,
+      "id": 1
     },
     {
-      "id": 2,
-      "listId": 2,
-      "text": "Learn Design Patterns"
+      "listId": 1,
+      "text": "fgfg",
+      "completed": false,
+      "id": 2
     },
     {
-      "id": 3,
-      "listId": 2,
-      "text": "ReactJS Hooks (useState, useReducer, useEffect etc.)"
+      "listId": 1,
+      "text": "fgfgf",
+      "completed": false,
+      "id": 3
     },
     {
-      "id": 4,
-      "listId": 2,
-      "text": "Redux (redux-observable, redux-saga)"
+      "listId": 1,
+      "text": "",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "listId": 1,
+      "text": "dfdfd",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "listId": 1,
+      "text": "",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "listId": 1,
+      "text": "",
+      "completed": false,
+      "id": 7
+    },
+    {
+      "listId": 1,
+      "text": "",
+      "completed": false,
+      "id": 8
     }
   ],
   "colors": [

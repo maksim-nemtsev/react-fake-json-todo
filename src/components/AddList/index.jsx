@@ -1,18 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-import List from '../List';
-import Badge from '../Badge';
+import List from "../List";
+import Badge from "../Badge";
 
-import closeSvg from '../../assets/img/close.svg';
+import closeSvg from "../../assets/img/close.svg";
 
-import './AddList.scss';
+import "./AddList.scss";
 
+//states
 const AddList = ({ colors, onAdd }) => {
   const [visiblePopup, setVisiblePopup] = useState(false);
-  const [seletedColor, selectColor] = useState(3);
+  const [selectedColor, selectColor] = useState(3);
+  //isLoading-request in progress
   const [isLoading, setIsLoading] = useState(false);
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
     if (Array.isArray(colors)) {
@@ -22,28 +24,37 @@ const AddList = ({ colors, onAdd }) => {
 
   const onClose = () => {
     setVisiblePopup(false);
-    setInputValue('');
+    setInputValue("");
     selectColor(colors[0].id);
   };
 
   const addList = () => {
     if (!inputValue) {
-      alert('Введите название списка');
+      alert("Enter a list name");
       return;
     }
     setIsLoading(true);
+    //send a request and transfer the object to the address
+    //received a response from the server
+    // filtered color by id
+    //created a new object and added color properties to it
     axios
-      .post('http://localhost:3001/lists', {
+      .post("http://localhost:3001/lists", {
         name: inputValue,
-        colorId: seletedColor
+        colorId: selectedColor,
       })
       .then(({ data }) => {
-        const color = colors.filter(c => c.id === seletedColor)[0].name;
+        const color = colors.filter((c) => c.id === selectedColor)[0].name;
         const listObj = { ...data, color: { name: color } };
         onAdd(listObj);
         onClose();
       })
+      .catch(() => {
+        alert("error adding list");
+      })
       .finally(() => {
+        //after successful completion of the request
+        //not important from query result
         setIsLoading(false);
       });
   };
@@ -54,7 +65,7 @@ const AddList = ({ colors, onAdd }) => {
         onClick={() => setVisiblePopup(true)}
         items={[
           {
-            className: 'list__add-button',
+            className: "list__add-button",
             icon: (
               <svg
                 width="12"
@@ -79,8 +90,8 @@ const AddList = ({ colors, onAdd }) => {
                 />
               </svg>
             ),
-            name: 'Добавить список'
-          }
+            name: "Add List",
+          },
         ]}
       />
       {visiblePopup && (
@@ -94,24 +105,24 @@ const AddList = ({ colors, onAdd }) => {
 
           <input
             value={inputValue}
-            onChange={e => setInputValue(e.target.value)}
+            onChange={(e) => setInputValue(e.target.value)}
             className="field"
             type="text"
-            placeholder="Название списка"
+            placeholder="List title"
           />
 
           <div className="add-list__popup-colors">
-            {colors.map(color => (
+            {colors.map((color) => (
               <Badge
                 onClick={() => selectColor(color.id)}
                 key={color.id}
                 color={color.name}
-                className={seletedColor === color.id && 'active'}
+                className={selectedColor === color.id && "active"}
               />
             ))}
           </div>
           <button onClick={addList} className="button">
-            {isLoading ? 'Добавление...' : 'Добавить'}
+            {isLoading ? "Adding..." : "Add"}
           </button>
         </div>
       )}

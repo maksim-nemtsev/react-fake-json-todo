@@ -11,7 +11,12 @@
       }
     }
     span {
+      flex: 1;
       color: #767676;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 160px;
+      white-space: nowrap;
     }
   }
 
