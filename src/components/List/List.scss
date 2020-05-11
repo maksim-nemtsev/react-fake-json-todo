@@ -34,7 +34,7 @@
 
     //low priory
     &:hover #{$self}__remove-icon {
-      opacity: 0.3;
+      opacity: 0.4;
     }
 
     //high priory
@@ -43,13 +43,13 @@
       transition: opacity 0.25s ease-in-out;
 
       &:hover {
-        opacity: 0.8;
+        opacity: 0.9;
       }
     }
 
     span {
       flex: 1;
-      color: #fdffdf;
+      color: #f5ff70;
       text-overflow: ellipsis;
       overflow: hidden;
       width: 160px;
@@ -62,9 +62,9 @@
     }
 
     &.active {
-      background: rgb(236, 255, 254);
+      background: rgb(56, 133, 129);
       box-shadow: 1px 5px 10px rgba(75, 102, 95, 0);
-      border-radius: 4px;
+      border-radius: 10px;
     }
 
     .badge {
@@ -77,7 +77,7 @@
       margin-right: 10px;
       svg {
         path {
-          fill: rgb(199, 197, 178);
+          fill: rgb(204, 201, 173);
         }
       }
     }

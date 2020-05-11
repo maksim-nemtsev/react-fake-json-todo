@@ -37,7 +37,7 @@ function App() {
   };
 
   const onEditTask = (listId, taskObj) => {
-    const newTaskText = window.prompt("Текст задачи", taskObj.text);
+    const newTaskText = window.prompt("Task text", taskObj.text);
 
     if (!newTaskText) {
       return;
@@ -60,12 +60,12 @@ function App() {
         text: newTaskText,
       })
       .catch(() => {
-        alert("Не удалось обновить задачу");
+        alert("Failed to update task.");
       });
   };
 
   const onRemoveTask = (listId, taskId) => {
-    if (window.confirm("Вы действительно хотите удалить задачу?")) {
+    if (window.confirm("Delete task ?")) {
       const newList = lists.map((item) => {
         if (item.id === listId) {
           item.tasks = item.tasks.filter((task) => task.id !== taskId);
@@ -74,7 +74,7 @@ function App() {
       });
       setLists(newList);
       axios.delete("http://localhost:3001/tasks/" + taskId).catch(() => {
-        alert("Не удалось удалить задачу");
+        alert("Failed to delete task.");
       });
     }
   };
@@ -97,7 +97,7 @@ function App() {
         completed,
       })
       .catch(() => {
-        alert("Не удалось обновить задачу");
+        alert("Failed to update task.");
       });
   };
 
@@ -113,7 +113,6 @@ function App() {
 
   useEffect(() => {
     const listId = history.location.pathname.split("lists/")[1];
-
     if (lists) {
       const list = lists.find((list) => list.id === Number(listId));
       setActiveItem(list);
@@ -151,15 +150,12 @@ function App() {
         {lists ? (
           <List
             items={lists}
-            // delete list (AddList code)
             onRemove={(id) => {
-              //removal from state
               const newLists = lists.filter((item) => item.id !== id);
-              // pass a new array in state
               setLists(newLists);
             }}
             onClickItem={(list) => {
-              history.push(`/lists/${lists.id}`);
+              history.push(`/lists/${list.id}`);
             }}
             activeItem={activeItem}
             isRemovable

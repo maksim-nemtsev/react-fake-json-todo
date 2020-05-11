@@ -22,8 +22,8 @@ body {
   left: 50%;
   font-size: 16px;
   top: 50%;
-  width: 900px;
-  height: calc(100vh - 200px);
+  width: 1000px;
+  height: calc(100vh - 300px);
   transform: translate(-50%, -50%);
   box-shadow: 1px 2px 10px rgb(200, 202, 88);
   border-radius: 15px;
@@ -33,11 +33,12 @@ body {
   &__sidebar {
     background-color: rgb(95, 18, 65);
     color: cornsilk;
-    width: 200px;
+    width: 300px;
     height: 100%;
-    border-right: 1px solid rgb(255, 244, 213);
+    border-right: 1px solid rgb(73, 150, 153);
     padding: 60px 20px;
     border-radius: 15px;
+    overflow: scroll;
   }
 
   &__tasks {
@@ -64,7 +65,7 @@ body {
 
   &:active {
     background: darken(#5db685, 25%);
-    color: #ffffff;
+    color: #a31616;
   }
 
   &:disabled {
@@ -87,7 +88,7 @@ body {
 }
 
 .field {
-  background: #ffffff;
+  background: rgb(216, 215, 150);
   border: 1px solid #efefef;
   box-sizing: border-box;
   border-radius: 5px;
@@ -97,6 +98,6 @@ body {
   width: 100%;
 
   &:focus {
-    border-color: rgb(93, 206, 200);
+    border-color: rgb(0, 26, 255);
   }
 }

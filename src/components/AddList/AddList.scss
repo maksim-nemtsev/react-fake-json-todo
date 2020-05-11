@@ -1,15 +1,15 @@
 .add-list {
   &__popup {
-    width: 325px;
+    width: 250px;
     height: 160px;
-    background: rgb(205, 253, 253);
+    background: rgb(22, 147, 151);
     box-shadow: 15px 6px 20px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
     padding: 17px;
     position: relative;
     box-sizing: border-box;
-    top: -25px;
-    left: 10px;
+    top: -100px;
+    // left: 10px;
 
     .button {
       width: 100%;
@@ -18,8 +18,8 @@
 
     &-close-btn {
       position: absolute;
-      right: -7px;
-      top: -7px;
+      right: -5px;
+      top: -5px;
       cursor: pointer;
     }
 
@@ -46,9 +46,9 @@
 
   input {
     text-align: center;
-    background: rgb(219, 224, 145);
+    background: rgb(249, 255, 167);
     font-size: 16px;
-    color: gray;
+    color: rgb(0, 0, 0);
     font-weight: 500;
   }
 }

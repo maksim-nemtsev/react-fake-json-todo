@@ -1,4 +1,5 @@
 .tasks {
+  color: cornsilk;
   &:not(:last-of-type) {
     margin-bottom: 30px;
   }
@@ -62,7 +63,7 @@
 
       span {
         font-size: 16px;
-        color: rgb(230, 228, 228);
+        color: rgb(204, 207, 121);
       }
     }
   }
@@ -87,7 +88,7 @@
         font-size: 16px;
         width: 100%;
         background-color: rgb(98, 53, 119);
-        color: cornsilk;
+        color: rgb(255, 251, 233);
 
         &:hover &-actions {
           opacity: 1;
@@ -105,13 +106,13 @@
           justify-content: center;
           width: 32px;
           height: 32px;
-          background-color: lighten(#f4f6f8, 2%);
+          background-color: lighten(#2f7dca, 2%);
           border-radius: 6px;
           margin-left: 5px;
           cursor: pointer;
 
           &:hover {
-            background-color: darken(#f4f6f8, 2%);
+            background-color: darken(#2c73b9, 2%);
             svg {
               opacity: 0.9;
             }
@@ -126,7 +127,7 @@
       }
 
       p {
-        margin-left: 15px;
+        margin-left: 20px;
         border: 0;
         font-size: 16px;
         width: 100%;
@@ -161,13 +162,13 @@
 
     &:hover {
       label {
-        background-color: lightgray;
-        border-color: lightgray;
+        background-color: rgb(30, 195, 200);
+        border-color: rgb(28, 143, 163);
         svg {
           opacity: 0.8;
 
           path {
-            stroke: #818181;
+            stroke: #e6e6e6;
           }
         }
       }
@@ -176,6 +177,7 @@
     label {
       cursor: pointer;
       border: 2px solid rgb(216, 216, 216);
+      color: cornsilk;
       display: flex;
       align-items: center;
       justify-content: center;
