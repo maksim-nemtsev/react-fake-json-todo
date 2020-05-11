@@ -1,94 +1,32 @@
 {
   "lists": [
     {
-      "name": "gfgfgf",
+      "name": "JavaScript",
       "colorId": 8,
       "id": 1
     },
     {
-      "name": "dfdfdfd",
+      "name": "React",
       "colorId": 8,
       "id": 2
     },
     {
-      "name": "rtrtr",
-      "colorId": 8,
+      "name": "TypeScript",
+      "colorId": 3,
       "id": 3
     },
     {
-      "name": "rtrtr",
-      "colorId": 8,
-      "id": 4
-    },
-    {
-      "name": "dfd",
-      "colorId": 8,
-      "id": 5
-    },
-    {
-      "name": "fgfgf",
+      "name": "Books",
       "colorId": 4,
-      "id": 6
-    },
-    {
-      "name": "dfdfd",
-      "colorId": 8,
-      "id": 7
-    },
-    {
-      "name": "fdfd",
-      "colorId": 1,
-      "id": 8
-    },
-    {
-      "name": "gfgf",
-      "colorId": 2,
-      "id": 9
-    },
-    {
-      "name": "fgfg",
-      "colorId": 2,
-      "id": 10
-    }
-  ],
-  "tasks": [
-    {
-      "listId": 1,
-      "text": "fgfgfgf",
-      "completed": true,
-      "id": 1
-    },
-    {
-      "listId": 1,
-      "text": "",
-      "completed": false,
-      "id": 2
-    },
-    {
-      "listId": 1,
-      "text": "dfdfd",
-      "completed": false,
-      "id": 3
-    },
-    {
-      "listId": 4,
-      "text": "fdfd",
-      "completed": false,
       "id": 4
     },
     {
-      "listId": 4,
-      "text": "dfdfdf",
-      "completed": false,
+      "name": "Articles",
+      "colorId": 4,
       "id": 5
-    },
-    {
-      "listId": 4,
-      "text": "dfdfd",
-      "completed": false,
-      "id": 6
     }
   ],
+  "tasks": [],
   "colors": [
     {
       "id": 8,

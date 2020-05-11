@@ -49,7 +49,7 @@
 
     span {
       flex: 1;
-      color: #f5ff70;
+      color: #e0e77b;
       text-overflow: ellipsis;
       overflow: hidden;
       width: 160px;
@@ -62,7 +62,7 @@
     }
 
     &.active {
-      background: rgb(56, 133, 129);
+      background: rgb(50, 100, 99);
       box-shadow: 1px 5px 10px rgba(75, 102, 95, 0);
       border-radius: 10px;
     }
