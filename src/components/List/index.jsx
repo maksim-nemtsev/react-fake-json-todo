@@ -40,7 +40,7 @@ const List = ({
           <i>{item.icon ? item.icon : <Badge color={item.color.name} />}</i>
           <span>
             {item.name}
-            {item.tasks && item.tasks.length > 0 && ` (${item.tasks.length})`}
+            {item.tasks && ` (${item.tasks.length})`}
           </span>
           {isRemovable && (
             <img

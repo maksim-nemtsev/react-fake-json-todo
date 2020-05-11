@@ -7,25 +7,30 @@
     },
     {
       "name": "dfdf",
-      "colorId": 1,
-      "id": 2
-    },
-    {
-      "name": "gghghg",
-      "colorId": 1,
+      "colorId": 4,
       "id": 3
     },
     {
-      "name": "ghghg",
-      "colorId": 1,
+      "name": "fdfdf",
+      "colorId": 4,
       "id": 4
+    },
+    {
+      "name": "dfd",
+      "colorId": 1,
+      "id": 5
+    },
+    {
+      "name": "zxzxzzx",
+      "colorId": 1,
+      "id": 6
     }
   ],
   "tasks": [
     {
       "listId": 1,
       "text": "gfgf",
-      "completed": false,
+      "completed": true,
       "id": 1
     },
     {
@@ -43,13 +48,13 @@
     {
       "listId": 1,
       "text": "",
-      "completed": false,
+      "completed": true,
       "id": 4
     },
     {
       "listId": 1,
       "text": "dfdfd",
-      "completed": false,
+      "completed": true,
       "id": 5
     },
     {
@@ -69,6 +74,12 @@
       "text": "",
       "completed": false,
       "id": 8
+    },
+    {
+      "listId": 4,
+      "text": "fdfd",
+      "completed": false,
+      "id": 10
     }
   ],
   "colors": [

@@ -1,4 +1,12 @@
 .tasks {
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
   &__title {
     font-family: "Montserrat";
     font-weight: bold;
@@ -35,7 +43,7 @@
         margin-top: 15px;
       }
     }
-  
+
     &-new {
       display: flex;
       align-items: center;
@@ -80,6 +88,48 @@
         width: 100%;
         background-color: rgb(98, 53, 119);
         color: cornsilk;
+
+        &:hover &-actions {
+          opacity: 1;
+        }
+      }
+
+      &-actions {
+        display: flex;
+        opacity: 0;
+        transition: opacity 0.15s ease-in-out;
+
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          background-color: lighten(#f4f6f8, 2%);
+          border-radius: 6px;
+          margin-left: 5px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darken(#f4f6f8, 2%);
+            svg {
+              opacity: 0.9;
+            }
+          }
+
+          svg {
+            width: 11px;
+            height: 11px;
+            opacity: 0.4;
+          }
+        }
+      }
+
+      p {
+        margin-left: 15px;
+        border: 0;
+        font-size: 16px;
+        width: 100%;
       }
     }
   }
@@ -137,18 +187,6 @@
 
       svg {
         opacity: 0;
-      }
-    }
-    //to the right of the input
-    input:checked + label {
-      background: rgb(60, 235, 104);
-      border: 2px solid rgb(60, 235, 104);
-
-      svg {
-        opacity: 0.8;
-        path {
-          stroke: rgb(255, 255, 255);
-        }
       }
     }
   }

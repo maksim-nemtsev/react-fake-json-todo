@@ -11,3 +11,5 @@
 ### 4.1 json-server ./src/assets/db.json --watch --port 3001
 
 ### 5. npm i axios
+
+### 6. npm install react-router-dom
