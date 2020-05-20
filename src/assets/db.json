@@ -1,7 +1,7 @@
 {
   "lists": [
     {
-      "name": "JavaScript",
+      "name": "JavaScriptbbnbnb",
       "colorId": 8,
       "id": 1
     },
@@ -26,21 +26,16 @@
       "id": 5
     },
     {
-      "name": "fdfd",
-      "colorId": 4,
+      "name": "dfdfdfd",
+      "colorId": 2,
       "id": 6
-    },
-    {
-      "name": "fdfdf",
-      "colorId": 4,
-      "id": 7
     }
   ],
   "tasks": [
     {
       "listId": 1,
       "text": "",
-      "completed": true,
+      "completed": false,
       "id": 1
     },
     {
@@ -56,30 +51,6 @@
       "id": 3
     },
     {
-      "listId": 6,
-      "text": "fgfgfgf",
-      "completed": false,
-      "id": 4
-    },
-    {
-      "listId": 6,
-      "text": "fgfgfgf",
-      "completed": false,
-      "id": 5
-    },
-    {
-      "listId": 6,
-      "text": "gfgfg",
-      "completed": false,
-      "id": 6
-    },
-    {
-      "listId": 6,
-      "text": "",
-      "completed": false,
-      "id": 7
-    },
-    {
       "listId": 1,
       "text": "dfd",
       "completed": true,
@@ -88,8 +59,14 @@
     {
       "listId": 1,
       "text": "",
-      "completed": false,
+      "completed": true,
       "id": 9
+    },
+    {
+      "listId": 6,
+      "text": "fdfdfdfd",
+      "completed": false,
+      "id": 10
     }
   ],
   "colors": [
