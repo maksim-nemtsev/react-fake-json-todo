@@ -14,6 +14,10 @@ const AddTaskForm = ({ list, onAddTask }) => {
   };
 
   const addTask = () => {
+    if (!inputValue) {
+      alert("Enter a list name");
+      return;
+    }
     const obj = {
       listId: list.id,
       text: inputValue,
