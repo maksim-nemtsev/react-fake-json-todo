@@ -1,4 +1,5 @@
 # step by step
+## only works when starting the json server !!! 
 
 ### 1. npx create-react-app react-fake-json-todo
 
